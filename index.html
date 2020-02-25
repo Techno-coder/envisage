@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Envisage</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://unpkg.com/popper.js@1"></script>
+	<link rel="stylesheet" href="https://unpkg.com/tippy.js@5/themes/material.css"/>
+	<script src="https://unpkg.com/tippy.js@5"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.14.0/cytoscape.min.js"
+	        integrity="sha256-rI7zH7xDqO306nxvXUw9gqkeBpvvmddDdlXJjJM7rEM=" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.0/codemirror.min.css"
+	      integrity="sha256-vZ3SaLOjnKO/gGvcUWegySoDU6ff33CS5i9ot8J9Czk=" crossorigin="anonymous"/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.0/codemirror.min.js"
+	        integrity="sha256-C1kVf8tUtnM4eBSZM0mE7kcDrTYuVGxACdyYvhMEeRo=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+</head>
+<body>
+<div style="display: flex; flex-direction: row; height: 100%">
+	<div class="box" style="flex-basis: 40%">
+		<div style="display: flex; flex-direction: row; padding: 2px 2px 5px 2px">
+			<label><select class="select" id="structure" onchange="render()"></select></label>
+			<button class="waves-effect waves-light btn" data-tippy-content="Copied!">Copy Render Code</button>
+		</div>
+		<label for="editor"></label><textarea id="editor"></textarea>
+	</div>
+	<div class="box" style="flex: 1; background-color: beige">
+		<div style="height: 100%" id="graph"></div>
+	</div>
+</div>
+<script src="index.js"></script>
+<script src="structures/edge_list.js"></script>
+<script src="structures/edge_list_weighted.js"></script>
+<script src="structures/adjacency_list.js"></script>
+<script src="structures/adjacency_list_weighted.js"></script>
+<script src="structures/tree.js"></script>
+</body>
+</html>
