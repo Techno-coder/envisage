@@ -14,4 +14,5 @@ New data structures can added in the `structures` folder. Each data structure mu
 - A code string that represents the C++ code that is copied to the clipboard
 - A render function for parsing and rendering the input text
 
-Additional files must also be appended to the index file body as a script.
+Additional files must also be appended to the index file body as a script. 
+If Typescript files are modified they must be recompiled.
